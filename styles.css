@@ -1,196 +1,224 @@
+/* Importa a fonte Open Sans do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Substitui Arial por Open Sans */
+  background-color: #f4f4f4;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 70px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #add8e6;
+}
+
+main {
+  padding-top: 80px;
+}
+
+.video-container {
+  width: 100%;
+  height: 100vh; /* Altura de 100% da tela */
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Estilo do banner */
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Altura de 100% da tela */
+}
+
+.banner-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* A imagem cobrirá a área disponível */
+}
+
+/* Estilo da imagem do lado esquerdo */
+.left-image {
+  position: absolute; /* Permite que a imagem seja posicionada dentro do container do banner */
+  top: 50%; /* Alinhamento vertical */
+  left: 0; /* Alinhamento à esquerda */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  height: 10px; /* Defina a altura desejada */
+  width: 10px; /* Defina a largura desejada */
+  z-index: 1; /* Certifica-se de que a imagem esteja atrás do conteúdo sobreposto */
+  border-radius: 10px; /* Adiciona bordas arredondadas, se desejado */
+  object-fit: cover; /* Garante que a imagem cubra o espaço designado sem distorção */
+}
+
+
+/* Conteúdo sobreposto no banner, centralizado no lado direito */
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  right: 0; /* Alinhamento ao lado direito */
+  width: 80%; /* Ocupa 50% do banner no lado direito */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto dentro do container */
+  color: white;
+  padding: 20px;
+  /* Removido o fundo */
+}
+
+.overlay-content h2 {
+  font-size: 30px;
+  margin-bottom: 15px; /* Espaço reduzido abaixo do título */
+  font-weight: 350; /* Fonte mais fina */
+}
+
+.overlay-content p {
+  font-size: 18px;
+  margin-bottom: 5px; /* Aumentado o espaço abaixo do parágrafo para mover o botão para baixo */
+  font-weight: 300; /* Fonte mais fina */
+}
+
+.saiba-mais-btn {
+  display: inline-block;
+  padding: 12px 30px; /* Ajustado para ser mais próximo */
+  background-color: #436CA2;
+  color: white;
+  font-size: 15px;
+  margin-top: 30px; /* Espaço adicionado acima do botão */
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 400; /* Fonte mais fina */
+  transition: background-color 0.3s ease;
+}
+
+.saiba-mais-btn:hover {
+  background-color: #7fa1d1;
+}
+
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.photo {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  flex: 2;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #acbfca;
+  color: #ffffff;
+}
+
+.social-icons i {
+  font-size: 24px;
+  color: white;
+}
+
+.social-icons i:hover {
+  color: #007bff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.address {
+  margin: 10px 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ffffff;
+  margin: 10px 0;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+  .overlay-content {
+    right: 0;
+    width: 100%; /* Para telas menores, ocupamos todo o banner */
+    text-align: center; /* Centralizamos o texto */
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ffffff;
-    color: #000000;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  header .logo img {
-    height: 70px;
-    width: auto;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 15px;
-  }
-  
-  nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    color: #add8e6;
-  }
-  
-  main {
-    padding: 80px 20px 20px;
-  }
-  
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-  }
-  
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-  }
-  
-  .info-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0;
-  }
-  
-  .photo {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .photo img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .info {
-    flex: 2;
-  }
-  
-  .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center; /* Centraliza os itens */
-  }
-  
-  .box {
-    flex: 1 1 calc(33.33% - 10px);
-    position: relative;
-  }
-  
-  .box img {
-    width: 100%;
-    height: auto;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #acbfca;
-    color: #ffffff;
-  }
-  
-  .social-icons i {
-    font-size: 24px;
-    color: white;
-  }
-  
-  .social-icons i:hover {
-    color: #007bff;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .address {
-    margin: 10px 0;
-  }
-  
-  hr {
-    border: 0;
-    height: 1px;
-    background: #ffffff;
-    margin: 10px 0;
-  }
-  
-  /* Responsividade */
+
   @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    nav ul li {
-      margin: 5px 0;
-    }
-  
-    .info-section {
-      flex-direction: column;
-    }
-  
-    .photo {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  
-    .box {
-      flex: 1 1 calc(50% - 10px); /* Dois itens por linha em telas pequenas */
+    .left-image {
+      height: 200px; /* Altura reduzida para dispositivos menores */
+      width: 200px; /* Largura reduzida para dispositivos menores */
     }
   }
   
-  @media (max-width: 480px) {
-    .box {
-      flex: 1 1 100%; /* Um item por linha em telas muito pequenas */
-    }
-  
-    .overlay {
-      font-size: 1.5rem;
-    }
-  
-    .social-icons a {
-      font-size: 20px;
-    }
+
+  .overlay-content h2 {
+    font-size: 28px;
   }
-  
+
+  .overlay-content p {
+    font-size: 16px;
+  }
+
+  .video-container {
+    height: 50vh;
+  }
+
+  .info-section {
+    flex-direction: column;
+  }
+
+  .photo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
