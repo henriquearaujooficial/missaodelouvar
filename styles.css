@@ -22,6 +22,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 header .logo img {
@@ -53,80 +54,83 @@ main {
 
 .video-container {
   width: 100%;
-  height: 100vh; /* Altura de 100% da tela */
+  height: auto; /* Ajusta a altura automaticamente */
+  display: flex;
+  justify-content: center; /* Centraliza o vídeo horizontalmente */
+  align-items: center; /* Centraliza o vídeo verticalmente */
 }
 
 .video-container iframe {
   width: 100%;
-  height: 100%;
+  height: 100%; /* Mantém a altura automática baseada no contêiner */
+  aspect-ratio: 16 / 9; /* Mantém a proporção de 16:9 para vídeos */
   border: none;
 }
+
+/* Ajustes adicionais se necessário */
+
 
 /* Estilo do banner */
 .banner-container {
   position: relative;
   width: 100%;
-  height: 80vh; /* Altura do banner */
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Estilo da imagem principal do banner */
 .banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Garante que o banner preencha corretamente sem distorcer */
+  max-width: 100%;
+  height: auto; /* Ajusta automaticamente */
 }
 
-/* Estilo da imagem do lado esquerdo */
 .left-image {
-  position: absolute; /* Posiciona a imagem dentro do container do banner */
-  top: 50%; /* Centraliza verticalmente */
-  left: 400px; /* Adiciona um espaçamento da borda esquerda */
-  transform: translateY(-50%); /* Centraliza verticalmente */
-  height: 500px; /* Define a altura da imagem */
-  width: 350px; /* Define a largura da imagem */
-  z-index: 2; /* Certifica-se de que a imagem esteja acima do banner */
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
-  border-radius: 10px; /* Adiciona bordas arredondadas */
-  background-color: transparent; /* Garante que o fundo seja transparente */
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  transform: translateY(-50%);
+  height: 80vh;
+  width: 35vw;
+  z-index: 2;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: transparent;
 }
 
-/* Conteúdo sobreposto no banner, centralizado no lado direito */
 .overlay-content {
   position: absolute;
   top: 50%;
-  right: 10%; /* Alinhamento ao lado direito */
-  width: 50%; /* Ajusta a largura para caber dentro do banner */
-  transform: translateY(-50%); /* Centraliza verticalmente */
-  text-align: center; /* Centraliza o texto dentro do container */
+  right: 5%;
+  width: 50%;
+  transform: translateY(-50%);
+  text-align: center;
   color: white;
   padding: 20px;
 }
 
 .overlay-content h2 {
   font-size: 30px;
-  margin-bottom: 15px; /* Espaço reduzido abaixo do título */
-  font-weight: 350; /* Fonte mais fina */
+  margin-bottom: 18px;
+  font-weight: 350;
 }
 
 .overlay-content p {
-  font-size: 18px;
-  margin-bottom: 5px; /* Espaço entre parágrafos */
-  font-weight: 300; /* Fonte mais fina */
+  font-size: 19px;
+  margin-bottom: 5px;
+  font-weight: 300;
 }
 
 .saiba-mais-btn {
   display: inline-block;
-  padding: 12px 30px; /* Ajustado para ser mais próximo */
-  background-color: #436ca2;
+  padding: 18px 40px;
+  background-color: #4f7db9;
   color: white;
-  font-size: 15px;
-  margin-top: 30px; /* Espaço adicionado acima do botão */
+  font-size: 16px;
+  margin-top: 30px;
   text-decoration: none;
   border-radius: 30px;
-  font-weight: 400; /* Fonte mais fina */
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
@@ -167,15 +171,63 @@ hr {
   margin: 10px 0;
 }
 
-/* Ajustes de responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .left-image {
+    height: 40vh;
+    width: 30vw;
+  }
+
   .overlay-content {
-    right: 0; /* Alinhamento à direita em telas menores */
-    width: 90%; /* Largura maior em telas menores */
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  header .logo img {
+    height: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 
   .left-image {
-    height: 50px; /* Ajuste para menor tamanho em telas pequenas */
-    width: 50px; /* Ajuste para menor tamanho em telas pequenas */
+    left: 5%;
+    height: 30vh;
+    width: 25vw;
+  }
+
+  .overlay-content {
+    width: 80%;
+  }
+
+  .saiba-mais-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-image {
+    display: none;
+  }
+
+  .overlay-content {
+    width: 90%;
+    font-size: 0.8rem;
+  }
+
+  .overlay-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .overlay-content p {
+    font-size: 0.9rem;
+  }
+
+  .saiba-mais-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
   }
 }
