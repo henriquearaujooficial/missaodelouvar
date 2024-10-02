@@ -148,9 +148,8 @@ nav ul li a:hover {
   gap: 20px; /* Espaçamento entre os boxes */
   max-width: 1000px; /* Limita a largura máxima */
   margin: 0 auto; /* Centraliza o contêiner na página */
-  margin-top: 70px; /* Margem superior para dar espaço abaixo do banner */
+  margin-top: 200px; /* Margem superior para dar espaço abaixo do banner */
 }
-
 
 /* Cada box ocupa 1/3 da linha */
 .box {
@@ -192,8 +191,8 @@ nav ul li a:hover {
   border-radius: 8px;
   background-color: #fff;
   width: 300px;
-  margin: 5px;
-  padding: 50px;
+  margin: 10px;
+  padding: 10px;
 }
 
 .profile-info {
@@ -204,16 +203,20 @@ nav ul li a:hover {
 }
 
 .profile-pic {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 .profile-name {
   font-weight: bold;
   font-size: 14px;
-  color: #4977AB;
+  color: #05458f;
+}
+
+.profile-name:hover {
+  color: #7fa1d1;
 }
 
 .post-image img {
@@ -249,15 +252,17 @@ footer {
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
+/* Estilo dos icos das redes */
 .social-icons a {
   color: white;
-  margin: 0 10px;
-  font-size: 20px;
+  margin: 0 20px;
+  font-size: 35px;
 }
 
+/* Estilo dos icos das redes */
 .social-icons a:hover {
   color: #4977AB;
 }
