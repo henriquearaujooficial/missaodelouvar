@@ -1,4 +1,3 @@
-/* Importa a fonte Open Sans do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 * {
@@ -8,8 +7,9 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif; /* Substitui Arial por Open Sans */
+  font-family: 'Open Sans', sans-serif;
   background-color: #f4f4f4;
+  padding-top: 80px;
 }
 
 header {
@@ -45,11 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #add8e6;
-}
-
-main {
-  padding-top: 80px;
+  color: #4977AB;
 }
 
 .video-container {
@@ -67,10 +63,17 @@ main {
   border: none;
 }
 
-/* Ajustes adicionais se necessário */
+/* Contêiner flexível para os boxes */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Centraliza os boxes horizontalmente */
+  gap: 20px;  /* Espaçamento entre os boxes */
+  max-width: 1000px;  /* Limita a largura máxima */
+  margin: 0 auto;  /* Centraliza o contêiner na página */
+  margin-top: 70px;  /* Margem superior para dar espaço abaixo do banner */
+}
 
-
-/* Estilo do banner */
 .banner-container {
   position: relative;
   width: 100%;
@@ -78,11 +81,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #4977AB;
 }
 
 .banner-img {
   max-width: 100%;
-  height: auto; /* Ajusta automaticamente */
+  height: auto;
 }
 
 .left-image {
@@ -95,7 +99,6 @@ main {
   z-index: 2;
   object-fit: cover;
   border-radius: 5px;
-  background-color: transparent;
 }
 
 .overlay-content {
@@ -112,13 +115,12 @@ main {
 .overlay-content h2 {
   font-size: 30px;
   margin-bottom: 18px;
-  font-weight: 350;
+  font-weight: 600;
 }
 
 .overlay-content p {
   font-size: 19px;
   margin-bottom: 5px;
-  font-weight: 300;
 }
 
 .saiba-mais-btn {
@@ -138,76 +140,17 @@ main {
   background-color: #7fa1d1;
 }
 
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background: #acbfca;
-  color: #ffffff;
-}
-
-.social-icons i {
-  font-size: 24px;
-  color: white;
-}
-
-.social-icons i:hover {
-  color: #007bff;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.address {
-  margin: 10px 0;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background: #ffffff;
-  margin: 10px 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-}
-
-.box {
-  width: 300px;
-  background-color: white;
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
-  margin: 20px;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-}
-
-.box img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #dbdbdb;
-}
-
-/* Contêiner flexível para os boxes */
+/* Modificações para organizar os boxes */
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* Centraliza os boxes horizontalmente */
-  gap: 20px;  /* Espaçamento entre os boxes */
-  max-width: 1200px;  /* Limita a largura máxima */
-  margin: 0 auto;  /* Centraliza o contêiner na página */
-  margin-top: 70px;  /* Margem superior para dar espaço abaixo do banner */
+  justify-content: center; /* Centraliza os boxes horizontalmente */
+  gap: 20px; /* Espaçamento entre os boxes */
+  max-width: 1000px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  margin-top: 70px; /* Margem superior para dar espaço abaixo do banner */
 }
-/* Ajuste para os dois primeiros boxes */
-.box:nth-child(1),
-.box:nth-child(2) {
-  margin-top: 50px;  /* Adiciona 50px de margem apenas nos dois primeiros boxes */
-}
+
 
 /* Cada box ocupa 1/3 da linha */
 .box {
@@ -219,48 +162,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
 }
 
-.box img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #dbdbdb;
+/* Ajuste para exibir 3 boxes em cima e 3 embaixo */
+.container .box:nth-child(3n+1) {
+  clear: both; /* Reinicia a linha a cada 3 boxes */
 }
 
-.post-info, .post-content, .post-actions {
-  padding: 10px;
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 768px) {
+  .box {
+    width: calc(50% - 20px); /* Em tablets, os boxes ocupam metade da linha */
+  }
 }
 
-/* Botão de perfil */
-.profile-btn {
-  display: block;
-  background-color: #3897f0;
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 12px;
-  margin-top: 10px;
-}
-
-.profile-btn:hover {
-  background-color: #3578e5;
-}
-
-/* Ações do post */
-.post-actions span {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.post-actions a {
-  color: #3897f0;
-  text-decoration: none;
-}
-
-.post-actions a:hover {
-  text-decoration: underline;
+@media (max-width: 480px) {
+  .box {
+    width: calc(100% - 20px); /* Em smartphones, os boxes ocupam toda a linha */
+  }
 }
 
 /* Estilo do box */
@@ -270,20 +190,17 @@ body {
   justify-content: space-between;
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
   background-color: #fff;
   width: 300px;
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 50px;
 }
 
-/* Perfil no topo, canto superior direito */
 .profile-info {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  padding-bottom: 10px;
-  position: relative;
+  padding: 10px;
 }
 
 .profile-pic {
@@ -296,190 +213,67 @@ body {
 .profile-name {
   font-weight: bold;
   font-size: 14px;
-  color: #333;
+  color: #4977AB;
 }
 
-/* Imagem da postagem no centro */
 .post-image img {
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  object-fit: cover;
 }
 
-/* Botão Ver mais no Instagram - canto inferior esquerdo */
 .post-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  padding: 10px;
 }
 
 .view-more {
   font-size: 14px;
   color: #007BFF;
   text-decoration: none;
-  padding: 5px 0;
-  text-align: left;
-  margin-left: 0;
 }
 
 .view-more:hover {
   text-decoration: underline;
 }
 
-/* Ícones sociais (coração, mensagem, compartilhar) */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #7fa1d1;
+  color: white;
+}
+
 .social-icons {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.heart-icon,
-.message-icon,
-.share-icon {
-  font-size: 20px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.heart-icon:hover,
-.message-icon:hover,
-.share-icon:hover {
-  transform: scale(1.2);
-}
-
-/* Responsividade: Ajuste para telas menores */
-@media (max-width: 768px) {
-  .box {
-    width: calc(50% - 20px);  /* 2 boxes por linha em telas menores */
-  }
-}
-
-@media (max-width: 480px) {
-  .box {
-    width: calc(100% - 20px);  /* 1 box por linha em telas pequenas */
-  }
-}
-
-
-.post-info {
-  padding: 10px;
-}
-
-.post-info h4 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.post-info p {
-  font-size: 12px;
-  color: gray;
-  margin-top: -5px;
-}
-
-.profile-btn {
-  display: block;
-  background-color: #3897f0;
+.social-icons a {
   color: white;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 12px;
-  margin-top: 10px;
+  margin: 0 10px;
+  font-size: 20px;
 }
 
-.profile-btn:hover {
-  background-color: #3578e5;
-}
-
-.post-content {
-  padding: 10px;
-  font-size: 14px;
-}
-
-.post-actions {
-  padding: 10px;
-  font-size: 12px;
-  color: gray;
-}
-
-.post-actions span {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.post-actions a {
-  color: #3897f0;
-  text-decoration: none;
-}
-
-.post-actions a:hover {
-  text-decoration: underline;
-}
-
-
-@media (max-width: 1200px) {
-  .left-image {
-    height: 40vh;
-    width: 30vw;
-  }
-
-  .overlay-content {
-    width: 60%;
-  }
+.social-icons a:hover {
+  color: #4977AB;
 }
 
 @media (max-width: 768px) {
-  header .logo img {
-    height: 50px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-image {
-    left: 5%;
-    height: 30vh;
-    width: 25vw;
-  }
-
-  .overlay-content {
-    width: 80%;
-  }
-
-  .saiba-mais-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+  .box {
+    width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
+  .box {
+    width: calc(100% - 20px);
+  }
+
   .left-image {
     display: none;
-  }
-
-  .overlay-content {
-    width: 90%;
-    font-size: 0.8rem;
-  }
-
-  .overlay-content h2 {
-    font-size: 1.2rem;
-  }
-
-  .overlay-content p {
-    font-size: 0.9rem;
-  }
-
-  .saiba-mais-btn {
-    padding: 8px 15px;
-    font-size: 0.8rem;
   }
 }
