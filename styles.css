@@ -32,10 +32,12 @@ header .logo img {
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: flex-start; /* Alinha o menu mais à esquerda */
+  padding-left: 5; /* Remove o espaçamento padrão à esquerda */
 }
 
-nav ul li {
-  margin-right: 15px;
+nav ul li:nth-child(n+2) {
+  margin-left: 70px; /* Aumente o valor para afastar mais à esquerda */
 }
 
 nav ul li a {
