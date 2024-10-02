@@ -39,7 +39,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #000;
+  color: #004AAD;
   text-decoration: none;
   font-weight: bold;
 }
@@ -81,23 +81,26 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4977AB;
+  background-color: #2D4C76;
+  overflow: hidden; /* Para garantir que a imagem não ultrapasse o contêiner */
 }
 
 .banner-img {
-  max-width: 100%;
+  max-width: 0%;
   height: auto;
+  object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
 }
 
 .left-image {
   position: absolute;
   top: 50%;
-  left: 150px;
-  transform: translateY(-50%);
-  height: 80vh;
-  width: 35vw;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 100%;
+  max-width: 300px; /* Controla a largura máxima da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorcer */
   z-index: 2;
-  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -148,7 +151,7 @@ nav ul li a:hover {
   gap: 20px; /* Espaçamento entre os boxes */
   max-width: 1000px; /* Limita a largura máxima */
   margin: 0 auto; /* Centraliza o contêiner na página */
-  margin-top: 200px; /* Margem superior para dar espaço abaixo do banner */
+  margin-top: 20px; /* Margem superior para dar espaço abaixo do banner */
 }
 
 /* Cada box ocupa 1/3 da linha */
@@ -212,7 +215,7 @@ nav ul li a:hover {
 .profile-name {
   font-weight: bold;
   font-size: 14px;
-  color: #05458f;
+  color: #004AAD;
 }
 
 .profile-name:hover {
@@ -234,7 +237,7 @@ nav ul li a:hover {
 
 .view-more {
   font-size: 14px;
-  color: #007BFF;
+  color: #2D4C76;
   text-decoration: none;
 }
 
@@ -289,6 +292,20 @@ footer {
     max-width: 90%;
     margin: 0 auto;
   }
+
+  @media (max-width: 768px) {
+    .left-image {
+      width: 50%; /* Reduz a largura em dispositivos menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .left-image {
+      width: 100%; /* Ocupa toda a largura em telas muito pequenas */
+      height: auto;
+    }
+  }
+  
 
   .box {
     width: calc(50% - 10px); /* Boxes ocupam metade da linha */
