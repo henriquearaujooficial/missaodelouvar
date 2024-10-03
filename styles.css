@@ -6,12 +6,14 @@
   padding: 0;
 }
 
+/* Estilos do corpo */
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f4f4f4;
   padding-top: 80px;
 }
 
+/* Cabeçalho fixo */
 header {
   display: flex;
   justify-content: space-between;
@@ -29,6 +31,7 @@ header .logo img {
   height: 70px;
 }
 
+/* Navegação */
 nav ul {
   list-style: none;
   display: flex;
@@ -41,15 +44,32 @@ nav ul li:nth-child(n+2) {
 }
 
 nav ul li a {
+  position: relative; /* Define o contexto para o pseudo-elemento */
   color: #004AAD;
   text-decoration: none;
   font-weight: bold;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #004AAD;
+  left: 0;
+  bottom: -5px; /* Posiciona a linha logo abaixo do texto */
+  transition: width 0.5s ease-in-out;
 }
 
 nav ul li a:hover {
   color: #4977AB;
 }
 
+nav ul li a:hover::after {
+  width: 100%; /* Expande a linha ao passar o mouse */
+}
+
+/* Container de vídeo */
 .video-container {
   width: 100%;
   height: auto; /* Ajusta a altura automaticamente */
@@ -76,6 +96,7 @@ nav ul li a:hover {
   margin-top: 70px;  /* Margem superior para dar espaço abaixo do banner */
 }
 
+/* Banner */
 .banner-container {
   position: relative;
   width: 100%;
@@ -156,6 +177,7 @@ nav ul li a:hover {
   margin-top: 20px; /* Margem superior para dar espaço abaixo do banner */
 }
 
+/* Boxes */
 /* Cada box ocupa 1/3 da linha */
 .box {
   width: calc(33.333% - 20px); /* 1/3 da largura com margem inclusa */
@@ -193,6 +215,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer; /* Muda o cursor para a mão ao passar sobre o link */
   padding: 10px;
 }
 
@@ -200,6 +223,7 @@ nav ul li a:hover {
 .profile-pic {
   width: 50px;
   height: 50px;
+  cursor: pointer; /* Muda o cursor para a mão ao passar sobre o link */
   border-radius: 50%;
   margin-right: 20px;
 }
@@ -237,6 +261,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 20px 0;
@@ -244,18 +269,47 @@ footer {
   color: white;
 }
 
-/* Estilo dos icos das redes coração */
+/* Estilo dos ícones das redes sociais */
 .social-icons {
   display: inline-block;
   margin: 0 10px;
-  font-size: 18px; /* Ajuste o tamanho conforme necessário */
-  cursor: pointer; /* Adiciona o cursor pointer ao passar o mouse */
-  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para o movimento */
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-bottom: 20px; /* Adiciona um espaço abaixo dos ícones */
 }
 
-.social-icons :hover{
-  transform: translateY(-2px); /* Move o ícone 5px para cima ao passar o mouse */
+.social-icons {
+  display: flex; /* Alinha os ícones em linha */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  margin-bottom: 10px; /* Espaçamento abaixo do contêiner */
 }
+
+.social-icons span {
+  display: inline-block;
+  margin: 0 2px; /* Espaçamento lateral entre os ícones */
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons span:hover {
+  transform: translateY(-5px); /* Move o ícone 5px para cima ao passar o mouse */
+}
+
+.social-icons .heart:hover {
+  transform: translateY(-5px) scale(1.2); /* Movimento e aumento específico para o ícone de coração */
+}
+
+.social-icons .message:hover {
+  transform: translateY(-5px) scale(1.1); /* Movimento e aumento específico para o ícone de mensagem */
+}
+
+.social-icons .share:hover {
+  transform: translateY(-5px) scale(1.15); /* Movimento e aumento específico para o ícone de compartilhar */
+}
+
+
 
 /* Estilo dos ícones das redes */
 .social-icons a {
@@ -297,6 +351,7 @@ footer {
     display: none;
   }
 }
+
 /* RESPOSIVIDADE */
 @media (max-width: 1024px) {
   /* Ajuste geral para tablets */
