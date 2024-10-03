@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 /* Estilos do corpo */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #f4f4f4;
   padding-top: 80px;
 }
@@ -35,34 +35,47 @@ header .logo img {
 nav ul {
   list-style: none;
   display: flex;
+  margin-left: 0; /* Remove qualquer margem da esquerda */
+  padding-left: 10px; /* Adiciona um espaçamento opcional */
   justify-content: flex-start; /* Alinha o menu mais à esquerda */
   padding-left: 5; /* Remove o espaçamento padrão à esquerda */
 }
 
-nav ul li:nth-child(n+2) {
+nav ul li:nth-child(n + 2) {
   margin-left: 60px; /* Aumente o valor para afastar mais à esquerda */
 }
 
+/* controle do menu do box */
 nav ul li a {
   position: relative; /* Define o contexto para o pseudo-elemento */
-  color: #004AAD;
+  color: #004aad;
   text-decoration: none;
   font-weight: bold;
 }
 
+nav ul li {
+  margin-left: 0; /* Remove margem entre os itens, se houver */
+  padding-left: 60px; /* Ajuste conforme necessário */
+}
+
+nav ul li a.active::after {
+  width: 100%; /* Mantém a linha sob o item ativo */
+  transition: width 0.3s ease-in-out;
+}
+
 nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
-  height: 2px;
-  background-color: #004AAD;
+  height: 1px;
+  background-color: #004aad;
   left: 0;
-  bottom: -5px; /* Posiciona a linha logo abaixo do texto */
-  transition: width 0.5s ease-in-out;
+  bottom: -3px; /* Posiciona a linha logo abaixo do texto */
+  transition: width 0s ease-in-out;
 }
 
 nav ul li a:hover {
-  color: #4977AB;
+  color: #4977ab;
 }
 
 nav ul li a:hover::after {
@@ -89,11 +102,11 @@ nav ul li a:hover::after {
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* Centraliza os boxes horizontalmente */
-  gap: 20px;  /* Espaçamento entre os boxes */
-  max-width: 1000px;  /* Limita a largura máxima */
-  margin: 0 auto;  /* Centraliza o contêiner na página */
-  margin-top: 70px;  /* Margem superior para dar espaço abaixo do banner */
+  justify-content: center; /* Centraliza os boxes horizontalmente */
+  gap: 20px; /* Espaçamento entre os boxes */
+  max-width: 1000px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  margin-top: 70px; /* Margem superior para dar espaço abaixo do banner */
 }
 
 /* Banner */
@@ -104,7 +117,7 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #2D4C76;
+  background-color: #2d4c76;
   overflow: hidden; /* Para garantir que a imagem não ultrapasse o contêiner */
 }
 
@@ -152,7 +165,7 @@ nav ul li a:hover::after {
 .saiba-mais-btn {
   display: inline-block;
   padding: 18px 40px;
-  background-color: #4977AB;
+  background-color: #4977ab;
   color: white;
   font-size: 16px;
   margin-top: 30px;
@@ -192,10 +205,9 @@ nav ul li a:hover::after {
 }
 
 /* Ajuste para exibir 3 boxes em cima e 3 embaixo */
-.container .box:nth-child(3n+1) {
+.container .box:nth-child(3n + 1) {
   clear: both; /* Reinicia a linha a cada 3 boxes */
 }
-
 
 /* Estilo do box */
 .box {
@@ -231,7 +243,7 @@ nav ul li a:hover::after {
 .profile-name {
   font-weight: bold;
   font-size: 15px;
-  color: #004AAD;
+  color: #004aad;
 }
 
 .profile-name:hover {
@@ -253,7 +265,7 @@ nav ul li a:hover::after {
 
 .view-more {
   font-size: 14px;
-  color: #2D4C76;
+  color: #2d4c76;
   text-decoration: none;
 }
 
@@ -294,7 +306,9 @@ footer {
 }
 
 .social-icons span:hover {
-  transform: translateY(-5px); /* Move o ícone 5px para cima ao passar o mouse */
+  transform: translateY(
+    -5px
+  ); /* Move o ícone 5px para cima ao passar o mouse */
 }
 
 .social-icons .heart:hover {
@@ -319,7 +333,7 @@ footer {
 }
 /* Estilo dos icos das redes */
 .social-icons a:hover {
-  color: #4977AB;
+  color: #4977ab;
 }
 
 /* Responsividade: Ajuste para telas menores */
@@ -364,14 +378,13 @@ footer {
       width: 50%; /* Reduz a largura em dispositivos menores */
     }
   }
-  
+
   @media (max-width: 480px) {
     .left-image {
       width: 100%; /* Ocupa toda a largura em telas muito pequenas */
       height: auto;
     }
   }
-  
 
   .box {
     width: calc(50% - 10px); /* Boxes ocupam metade da linha */
@@ -400,7 +413,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .profile-pic {
     margin-right: 10px;
   }
@@ -469,4 +482,3 @@ footer {
     font-size: 20px;
   }
 }
-
