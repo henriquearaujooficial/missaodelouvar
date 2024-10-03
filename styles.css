@@ -309,13 +309,12 @@ footer {
   transform: translateY(-5px) scale(1.15); /* Movimento e aumento específico para o ícone de compartilhar */
 }
 
-
-
 /* Estilo dos ícones das redes */
 .social-icons a {
   color: white;
   margin: 0 20px;
   font-size: 35px;
+  margin-bottom: 10px; /* Espaçamento abaixo das redes */
   transition: margin-bottom 0.2s ease, color 0.2s ease; /* Transição suave para o movimento e cor */
 }
 /* Estilo dos icos das redes */
