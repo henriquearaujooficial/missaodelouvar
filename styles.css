@@ -37,7 +37,7 @@ nav ul {
 }
 
 nav ul li:nth-child(n+2) {
-  margin-left: 70px; /* Aumente o valor para afastar mais à esquerda */
+  margin-left: 60px; /* Aumente o valor para afastar mais à esquerda */
 }
 
 nav ul li a {
@@ -174,18 +174,6 @@ nav ul li a:hover {
   clear: both; /* Reinicia a linha a cada 3 boxes */
 }
 
-/* Responsividade: Ajuste para telas menores */
-@media (max-width: 768px) {
-  .box {
-    width: calc(50% - 20px); /* Em tablets, os boxes ocupam metade da linha */
-  }
-}
-
-@media (max-width: 480px) {
-  .box {
-    width: calc(100% - 20px); /* Em smartphones, os boxes ocupam toda a linha */
-  }
-}
 
 /* Estilo do box */
 .box {
@@ -200,6 +188,7 @@ nav ul li a:hover {
   padding: 10px;
 }
 
+/* Perfil das redes box */
 .profile-info {
   display: flex;
   justify-content: flex-start;
@@ -207,16 +196,17 @@ nav ul li a:hover {
   padding: 10px;
 }
 
+/* Perfil de @ dod box */
 .profile-pic {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .profile-name {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
   color: #004AAD;
 }
 
@@ -254,22 +244,42 @@ footer {
   color: white;
 }
 
+/* Estilo dos icos das redes coração */
 .social-icons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 18px; /* Ajuste o tamanho conforme necessário */
+  cursor: pointer; /* Adiciona o cursor pointer ao passar o mouse */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para o movimento */
 }
 
-/* Estilo dos icos das redes */
+.social-icons :hover{
+  transform: translateY(-2px); /* Move o ícone 5px para cima ao passar o mouse */
+}
+
+/* Estilo dos ícones das redes */
 .social-icons a {
   color: white;
   margin: 0 20px;
   font-size: 35px;
+  transition: margin-bottom 0.2s ease, color 0.2s ease; /* Transição suave para o movimento e cor */
 }
-
 /* Estilo dos icos das redes */
 .social-icons a:hover {
   color: #4977AB;
+}
+
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 768px) {
+  .box {
+    width: calc(50% - 20px); /* Em tablets, os boxes ocupam metade da linha */
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: calc(100% - 20px); /* Em smartphones, os boxes ocupam toda a linha */
+  }
 }
 
 @media (max-width: 768px) {
