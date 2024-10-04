@@ -134,7 +134,7 @@ nav ul li a:hover::after {
   transform: translate(-50%, -50%);
   height: auto;
   width: 90%;
-  max-width: 300px; /* Controla a largura máxima da imagem */
+  max-width: 350px; /* Controla a largura máxima da imagem */
   object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorcer */
   z-index: 2;
   border-radius: 5px;
