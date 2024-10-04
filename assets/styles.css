@@ -84,7 +84,7 @@ nav ul li a:hover::after {
 
 /* Container de vídeo */
 .video-container {
-  width: 110%;
+  width: 100%;
   height: auto; /* Ajusta a altura automaticamente */
   display: flex;
   justify-content: center; /* Centraliza o vídeo horizontalmente */
@@ -93,7 +93,7 @@ nav ul li a:hover::after {
 
 .video-container iframe {
   width: 100%;
-  height: 100%; /* Mantém a altura automática baseada no contêiner */
+  height: 120%; /* Mantém a altura automática baseada no contêiner */
   aspect-ratio: 16 / 9; /* Mantém a proporção de 16:9 para vídeos */
   border: none;
 }
@@ -112,8 +112,8 @@ nav ul li a:hover::after {
 /* Banner */
 .banner-container {
   position: relative;
-  width: 110%;
-  height: 80vh;
+  width: 100%;
+  height: 120vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -275,10 +275,15 @@ nav ul li a:hover::after {
 
 /* Rodapé */
 footer {
+  width: 100%;
   text-align: center;
   padding: 20px 0;
   background-color: #7fa1d1;
   color: white;
+  box-sizing: border-box; /* Para garantir que o padding não afete a largura total */
+}
+main {
+  flex: 1; /* Ocupa o espaço restante, empurrando o rodapé para o final */
 }
 
 /* Estilo dos ícones das redes sociais */
@@ -454,6 +459,7 @@ footer {
   }
 
   footer {
+    width: 100%;
     padding: 10px 0;
     font-size: 14px; /* Ajuste do tamanho da fonte no rodapé */
   }
