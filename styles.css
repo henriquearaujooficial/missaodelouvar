@@ -42,7 +42,7 @@ nav ul {
 }
 
 nav ul li:nth-child(n + 2) {
-  margin-left: 60px; /* Aumente o valor para afastar mais à esquerda */
+  margin-left: 90px; /* Aumente o valor para afastar mais à esquerda */
 }
 
 /* controle do menu do box */
@@ -54,8 +54,8 @@ nav ul li a {
 }
 
 nav ul li {
-  margin-left: 0; /* Remove margem entre os itens, se houver */
-  padding-left: 60px; /* Ajuste conforme necessário */
+  margin-left: 30; /* Remove margem entre os itens, se houver */
+  padding: 5px; /* Ajuste conforme necessário */
 }
 
 nav ul li a.active::after {
@@ -84,7 +84,7 @@ nav ul li a:hover::after {
 
 /* Container de vídeo */
 .video-container {
-  width: 100%;
+  width: 110%;
   height: auto; /* Ajusta a altura automaticamente */
   display: flex;
   justify-content: center; /* Centraliza o vídeo horizontalmente */
@@ -112,7 +112,7 @@ nav ul li a:hover::after {
 /* Banner */
 .banner-container {
   position: relative;
-  width: 100%;
+  width: 110%;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -133,7 +133,7 @@ nav ul li a:hover::after {
   left: 30%;
   transform: translate(-50%, -50%);
   height: auto;
-  width: 100%;
+  width: 90%;
   max-width: 300px; /* Controla a largura máxima da imagem */
   object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorcer */
   z-index: 2;
