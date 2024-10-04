@@ -341,6 +341,71 @@ main {
   color: #4977ab;
 }
 
+/* Seção dos artigos */
+.article-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.article {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.article p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Estilos da foto do autor */
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.author img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efeito ao passar o mouse sobre a imagem */
+.author img:hover {
+  transform: scale(1.1);
+}
+
+/* Efeito ao clicar na imagem */
+.author img:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.author-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.author-bio {
+  font-size: 14px;
+  color: #777;
+}
+
 /* Responsividade: Ajuste para telas menores */
 @media (max-width: 768px) {
   .box {
