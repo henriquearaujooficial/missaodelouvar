@@ -42,7 +42,7 @@ nav ul {
 }
 
 nav ul li:nth-child(n + 2) {
-  margin-left: 90px; /* Aumente o valor para afastar mais à esquerda */
+  margin-left: 50px; /* Aumente o valor para afastar mais à esquerda */
 }
 
 /* controle do menu do box */
