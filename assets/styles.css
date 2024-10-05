@@ -98,6 +98,36 @@ nav ul li a:hover::after {
   border: none;
 }
 
+ /* Estilo para a camada de sobreposição */
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 142%;
+  background-color: rgba(12, 64, 122, 0.7); /* Azul claro com transparência */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Estilo para o texto principal (título) */
+.overlay h2 {
+  font-size: 50px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Estilo para o texto secundário (subtítulo) */
+.overlay p {
+  font-size: 24px;
+  margin: 10px 0 0;
+}
+
 /* Contêiner flexível para os boxes */
 .container {
   display: flex;
