@@ -115,6 +115,22 @@ nav ul li a:hover::after {
   text-align: center;
 }
 
+/* Estilo para centralizar o texto e a logo */
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espaço entre a logo e o texto */
+}
+
+/* Estilo para a logo */
+.center-text img.logo {
+  width: 100px; /* Define a largura da logo para um tamanho pequeno */
+  height: auto; /* Mantém a proporção da logo */
+  vertical-align: middle;
+}
+
+
 /* Estilo para o texto principal (título) */
 .overlay h2 {
   font-size: 45px;
