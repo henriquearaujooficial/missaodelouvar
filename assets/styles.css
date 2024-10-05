@@ -120,22 +120,21 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espaço entre a logo e o texto */
+  gap: 15px; /* Espaço entre a logo e o texto */
 }
 
 /* Estilo para a logo */
 .center-text img.logo {
-  width: 100px; /* Define a largura da logo para um tamanho pequeno */
+  width: 120px; /* Define a largura da logo para um tamanho pequeno */
   height: auto; /* Mantém a proporção da logo */
   vertical-align: middle;
 }
-
 
 /* Estilo para o texto principal (título) */
 .overlay h2 {
   font-size: 45px;
   margin: 0;
-  margin-bottom: 80px; /* Adiciona espaço entre o título e o parágrafo */
+  margin-bottom: 85px; /* Adiciona espaço entre o título e o parágrafo */
   font-weight: bold;
 }
 
@@ -269,13 +268,29 @@ nav ul li a:hover::after {
   padding: 10px;
 }
 
+/* Estilo para o contêiner da logo do */
+.footer-logo {
+  display: flex;
+  justify-content: center; /* Centraliza a logo */
+  align-items: center;
+  width: 100%; /* A largura do contêiner será de 100% da tela */
+}
+
+/* Estilo para a imagem da logo */
+.footer-logo img {
+  max-width: 20%; /* A imagem não ultrapassará o tamanho do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Garante que a imagem se ajuste corretamente */
+  padding: 10px; /* Espaço opcional ao redor da imagem */
+}
+
 /* Perfil das redes box */
 .profile-info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   cursor: pointer; /* Muda o cursor para a mão ao passar sobre o link */
-  padding: 10px;
+  padding: 5px;
 }
 
 /* Perfil de @ dod box */
@@ -307,7 +322,7 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .view-more {
