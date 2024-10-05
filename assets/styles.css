@@ -98,8 +98,8 @@ nav ul li a:hover::after {
   border: none;
 }
 
- /* Estilo para a camada de sobreposição */
- .overlay {
+/* Estilo para a camada de sobreposição */
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -117,8 +117,9 @@ nav ul li a:hover::after {
 
 /* Estilo para o texto principal (título) */
 .overlay h2 {
-  font-size: 50px;
+  font-size: 45px;
   margin: 0;
+  margin-bottom: 80px; /* Adiciona espaço entre o título e o parágrafo */
   font-weight: bold;
 }
 
