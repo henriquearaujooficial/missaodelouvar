@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -113,6 +113,7 @@ nav ul li a:hover::after {
   color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
+  font-weight: 800; /* Aplica a fonte bold */
 }
 
 /* Estilo para centralizar o texto e a logo */
@@ -132,7 +133,7 @@ nav ul li a:hover::after {
 
 /* Estilo para o texto principal (título) */
 .overlay h2 {
-  font-size: 50px;
+  font-size: 60px;
   margin: 0;
   margin-bottom: 50px; /* Adiciona espaço entre o título e o parágrafo */
   font-weight: bold;
