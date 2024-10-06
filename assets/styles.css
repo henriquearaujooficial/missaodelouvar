@@ -283,6 +283,12 @@ nav ul li a:hover::after {
   object-fit: contain; /* Garante que a imagem se ajuste corretamente */
   padding: 10px; /* Espaço opcional ao redor da imagem */
   margin-top: 0px; /* Adiciona espaço extra abaixo da logo, opcional */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transições combinadas */
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da imagem */
+  opacity: 0.8; /* Reduz a opacidade */
 }
 
 /* Perfil das redes box */
@@ -345,8 +351,9 @@ footer {
   background-color: #ffffff;
   color: #004aad;
   box-sizing: border-box; /* Para garantir que o padding não afete a largura total */
-  margin-top: 10px; /* Adiciona espaço extra abaixo da logo, opcional */
+  margin-top: 0px; /* Adiciona espaço extra abaixo da logo, opcional */
 }
+
 main {
   flex: 1; /* Ocupa o espaço restante, empurrando o rodapé para o final */
 }
@@ -398,7 +405,7 @@ main {
   color: #004aad;
   margin: 0 20px;
   font-size: 35px;
-  margin-bottom: 10px; /* Espaçamento abaixo das redes */
+  margin-bottom: 100px; /* Espaçamento abaixo das redes */
   transition: margin-bottom 0.2s ease, color 0.2s ease; /* Transição suave para o movimento e cor */
 }
 /* Estilo dos icos das redes */
