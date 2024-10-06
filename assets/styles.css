@@ -272,7 +272,7 @@ nav ul li a:hover::after {
 .footer-logo {
   display: flex;
   justify-content: center; /* Centraliza a logo */
-  align-items: flex-start;
+  align-items: flex-end;
   width: 100%; /* A largura do contêiner será de 100% da tela */
 }
 
@@ -282,7 +282,7 @@ nav ul li a:hover::after {
   height: auto; /* Mantém a proporção da imagem */
   object-fit: contain; /* Garante que a imagem se ajuste corretamente */
   padding: 10px; /* Espaço opcional ao redor da imagem */
-  margin-bottom: 10px; /* Adiciona espaço extra abaixo da logo, opcional */
+  margin-top: 0px; /* Adiciona espaço extra abaixo da logo, opcional */
 }
 
 /* Perfil das redes box */
@@ -291,6 +291,7 @@ nav ul li a:hover::after {
   justify-content: flex-start;
   align-items: center;
   cursor: pointer; /* Muda o cursor para a mão ao passar sobre o link */
+  margin-top: 0px; /* Adiciona espaço extra abaixo da logo, opcional */
   padding: 5px;
 }
 
@@ -328,7 +329,7 @@ nav ul li a:hover::after {
 
 .view-more {
   font-size: 14px;
-  color: #2d4c76;
+  color: #092a59;
   text-decoration: none;
 }
 
@@ -341,34 +342,35 @@ footer {
   width: 100%;
   text-align: center;
   padding: 20px 0;
-  background-color: #7fa1d1;
-  color: white;
+  background-color: #ffffff;
+  color: #004aad;
   box-sizing: border-box; /* Para garantir que o padding não afete a largura total */
+  margin-top: 10px; /* Adiciona espaço extra abaixo da logo, opcional */
 }
 main {
   flex: 1; /* Ocupa o espaço restante, empurrando o rodapé para o final */
 }
 
-/* Estilo dos ícones das redes sociais */
+/* Estilo dos ícones das redes sociais do instagran*/
 .social-icons {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 5px;
   font-size: 18px;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
-  margin-bottom: 20px; /* Adiciona um espaço abaixo dos ícones */
+  transition: transform 0.5s ease, color 0.5s ease;
+  margin-top: 0px; /* Adiciona um espaço abaixo dos ícones */
 }
 
 .social-icons {
   display: flex; /* Alinha os ícones em linha */
   justify-content: center; /* Centraliza os ícones horizontalmente */
-  margin-bottom: 10px; /* Espaçamento abaixo do contêiner */
+  margin-bottom: 0px; /* Espaçamento abaixo do contêiner */
 }
 
 .social-icons span {
   display: inline-block;
   margin: 0 2px; /* Espaçamento lateral entre os ícones */
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -393,7 +395,7 @@ main {
 
 /* Estilo dos ícones das redes */
 .social-icons a {
-  color: white;
+  color: #004aad;
   margin: 0 20px;
   font-size: 35px;
   margin-bottom: 10px; /* Espaçamento abaixo das redes */
@@ -401,7 +403,7 @@ main {
 }
 /* Estilo dos icos das redes */
 .social-icons a:hover {
-  color: #4977ab;
+  color: #729cd7;
 }
 
 /* Seção dos artigos */
