@@ -120,21 +120,21 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* Espaço entre a logo e o texto */
+  gap: 10px; /* Espaço entre a logo e o texto */
 }
 
 /* Estilo para a logo */
 .center-text img.logo {
-  width: 120px; /* Define a largura da logo para um tamanho pequeno */
+  width: 150px; /* Define a largura da logo para um tamanho pequeno */
   height: auto; /* Mantém a proporção da logo */
   vertical-align: middle;
 }
 
 /* Estilo para o texto principal (título) */
 .overlay h2 {
-  font-size: 45px;
+  font-size: 50px;
   margin: 0;
-  margin-bottom: 85px; /* Adiciona espaço entre o título e o parágrafo */
+  margin-bottom: 50px; /* Adiciona espaço entre o título e o parágrafo */
   font-weight: bold;
 }
 
@@ -268,11 +268,11 @@ nav ul li a:hover::after {
   padding: 10px;
 }
 
-/* Estilo para o contêiner da logo do */
+/* Estilo para o contêiner da logo do rodapé*/
 .footer-logo {
   display: flex;
   justify-content: center; /* Centraliza a logo */
-  align-items: center;
+  align-items: flex-start;
   width: 100%; /* A largura do contêiner será de 100% da tela */
 }
 
@@ -282,6 +282,7 @@ nav ul li a:hover::after {
   height: auto; /* Mantém a proporção da imagem */
   object-fit: contain; /* Garante que a imagem se ajuste corretamente */
   padding: 10px; /* Espaço opcional ao redor da imagem */
+  margin-bottom: 10px; /* Adiciona espaço extra abaixo da logo, opcional */
 }
 
 /* Perfil das redes box */
