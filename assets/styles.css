@@ -141,8 +141,9 @@ nav ul li a:hover::after {
 
 /* Estilo para o texto secundário (subtítulo) */
 .overlay p {
-  font-size: 24px;
-  margin: 10px 0 0;
+  font-size: 15px;
+  margin: 6px 0 0;
+  font-weight: 300; /* Traz uma aparência mais fina */
 }
 
 /* Contêiner flexível para os boxes */
@@ -209,6 +210,25 @@ nav ul li a:hover::after {
   margin-bottom: 5px;
 }
 
+.conosco-btn {
+  display: inline-block;
+  width: 180px; /* Ajuste conforme necessário */
+  height: 65px; /* Ajuste conforme necessário */
+  padding: 20px 20px;
+  background-color: #0c0e7a;
+  color: white;
+  font-size: 12px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.conosco-btn:hover {
+  background-color: #4977ab;
+}
+
 .saiba-mais-btn {
   display: inline-block;
   padding: 18px 40px;
@@ -217,7 +237,7 @@ nav ul li a:hover::after {
   font-size: 16px;
   margin-top: 30px;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 50px;
   font-weight: 600;
   transition: background-color 0.3s ease;
 }
