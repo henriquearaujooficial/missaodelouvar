@@ -212,13 +212,13 @@ nav ul li a:hover::after {
 
 .conosco-btn {
   display: inline-block;
-  width: 180px; /* Ajuste conforme necessário */
+  width: 200px; /* Ajuste conforme necessário */
   height: 65px; /* Ajuste conforme necessário */
   padding: 20px 20px;
-  background-color: #0c0e7a;
+  background-color: #0c297a;
   color: white;
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: 60px;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
@@ -235,7 +235,7 @@ nav ul li a:hover::after {
   background-color: #4977ab;
   color: white;
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: 50px;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
