@@ -246,6 +246,24 @@ nav ul li a:hover::after {
   background-color: #7fa1d1;
 }
 
+/*.saiba-mais-btn::after {
+  content: "";
+  display: block;
+  width: 100%; /* Define a largura da linha */
+/* height: 2px; /* Altura da linha */
+/*background-color: #0c0e7a; /* Cor da linha */
+/*margin-top: 5px; /* Espaçamento entre o botão e a linha */
+/*}*/
+
+.line {
+  width: 8%; /* Largura da linha */
+  height: 1px; /* Altura da linha */
+  margin-top: 40px; /* Espaçamento entre o botão e a linha */
+  background-color: #4977ab; /* Cor da linha */
+  margin-left: 273px; /* Espaço entre o botão e a linha */
+  /* A linha será centralizada verticalmente em relação ao botão */
+}
+
 /* Modificações para organizar os boxes */
 .container {
   display: flex;
