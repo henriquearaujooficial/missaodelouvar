@@ -47,14 +47,15 @@
   .artigo-card {
     background-color: white;
     width: 300px;
-    padding: 10px; /* Mantém o espaçamento interno, se necessário */
-    margin: 20px 20px; /* Reduz o espaçamento horizontal entre os cards */
+    padding: 10px;
+    margin: 20px 20px;
     box-shadow: 0 2px 10px rgba(230, 225, 225, 0.89);
     border-radius: 8px;
     text-align: left;
-    padding-bottom: 25px;
-    overflow: hidden; /* Para garantir que a imagem não ultrapasse os limites */
+    overflow: hidden;
     transition: transform 0.3s ease;
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Mantém a cor do texto ao invés de mudar para a cor padrão do link */
   }
 
   .artigo-card:hover {
@@ -85,3 +86,5 @@
     color: #333;
   }
 }
+
+/* Nova pagina ao Clicar*/
