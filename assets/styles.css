@@ -48,13 +48,14 @@ nav ul li:nth-child(n + 2) {
 /* controle do menu do box */
 nav ul li a {
   position: relative; /* Define o contexto para o pseudo-elemento */
-  color: #004aad;
+  color: #333;
+  font-size: 11px;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav ul li {
-  margin-left: 30; /* Remove margem entre os itens, se houver */
+  margin-left: 20; /* Remove margem entre os itens, se houver */
   padding: 5px; /* Ajuste conforme necessário */
 }
 
