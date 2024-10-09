@@ -1,28 +1,58 @@
-// Verifica se o navegador suporta a Web Speech API
-const voiceSearchButton = document.getElementById("voice-search-button");
+// Captura o campo de pesquisa e o botão de pesquisa
 const searchInput = document.getElementById("search-input");
 
-if ("webkitSpeechRecognition" in window) {
-  const recognition = new webkitSpeechRecognition();
-  recognition.continuous = false;
-  recognition.interimResults = false;
-  recognition.lang = "pt-BR"; // Define o idioma como português do Brasil
+// Função para consultar os livros
+async function searchBooks() {
+  const query = searchInput.value; // Obtém o valor digitado
+  if (query) {
+    try {
+      // Chamada para a API para buscar livros
+      const response = await fetch(
+        `https://sua-api-url.com/search?query=${encodeURIComponent(query)}`
+      );
+      const data = await response.json();
 
-  // Quando a fala é reconhecida
-  recognition.onresult = function (event) {
-    const speechResult = event.results[0][0].transcript;
-    searchInput.value = speechResult; // Insere o resultado no campo de texto
-    console.log("Você disse: ", speechResult); // Exibe o resultado no console
-  };
-
-  // Ação ao clicar no botão de voz
-  voiceSearchButton.onclick = function () {
-    recognition.start(); // Inicia o reconhecimento de voz
-  };
-
-  recognition.onend = function () {
-    recognition.stop(); // Para o reconhecimento de voz ao final
-  };
-} else {
-  console.log("O reconhecimento de voz não é suportado neste navegador.");
+      // Aqui você pode processar os dados recebidos e exibi-los na página
+      console.log(data); // Para depuração, você pode remover depois
+      // Exibir os resultados (essa parte você deve implementar)
+    } catch (error) {
+      console.error("Erro ao buscar livros:", error);
+    }
+  }
 }
+
+// Dispara a pesquisa ao pressionar "Enter" no campo de texto
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchBooks();
+  }
+});
+
+// Dispara a pesquisa ao clicar no ícone de microfone ou botão
+const micButton = document.getElementById("mic-button");
+micButton.addEventListener("click", searchBooks);
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+// Simulação de um banco de dados de livros
+const books = [
+  { title: "O Senhor dos Anéis", author: "J.R.R. Tolkien" },
+  { title: "1984", author: "George Orwell" },
+  { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry" }
+  // Adicione mais livros conforme necessário
+];
+
+// Rota de pesquisa
+app.get("/search", (req, res) => {
+  const query = req.query.query.toLowerCase();
+  const results = books.filter((book) =>
+    book.title.toLowerCase().includes(query)
+  );
+  res.json(results);
+});
+
+// Inicia o servidor
+app.listen(PORT, () => {
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
