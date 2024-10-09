@@ -253,7 +253,7 @@ nav ul li a:hover::after {
   height: 1px; /* Altura da linha */
   margin-top: 60px; /* Espaçamento entre o botão e a linha */
   background-color: #4977ab; /* Cor da linha */
-  margin-left: 240px; /* Espaço entre o botão e a linha */
+  margin-left: 260px; /* Espaço entre o botão e a linha */
   /* A linha será centralizada verticalmente em relação ao botão */
 }
 
