@@ -1,182 +1,161 @@
-* {
-  .artigos {
-    text-align: center;
-    padding: 40px 0;
-  }
+.artigos {
+  text-align: center;
+  padding: 40px 0;
+}
 
-  .artigos h1 {
-    text-align: center; /* Mantém o texto centralizado */
-    font-size: 25px;
-    margin-top: 100px; /* Controla a distância do topo */
-    margin-bottom: 60px; /* Controla a distância para o conteúdo abaixo */
-    margin-left: -700px; /* Move o título um pouco mais para a esquerda */
-    color: #4c8ad4;
-    font-weight: 200; /* Define a espessura da fonte mais fina */
-  }
+.artigos h1 {
+  text-align: center; /* Mantém o texto centralizado */
+  font-size: 25px;
+  margin-top: 100px; /* Controla a distância do topo */
+  margin-bottom: 60px; /* Controla a distância para o conteúdo abaixo */
+  margin-left: -700px; /* Move o título um pouco mais para a esquerda */
+  color: #4c8ad4;
+  font-weight: 200; /* Define a espessura da fonte mais fina */
+}
 
-  /* Estilos gerais da barra de pesquisa */
-  .search-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 30px;
-    padding: 5px;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  }
+/* Estilos gerais da barra de pesquisa */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 5px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-  /* Estilos para o campo de texto (input) */
-  .search-bar input[type="text"] {
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 16px;
-    padding: 10px 50px; /* Espaço para os ícones à esquerda e à direita */
-    width: 100%;
-    border-radius: 30px;
-    color: #333;
-  }
+/* Estilos para o campo de texto (input) */
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  padding: 10px 50px; /* Espaço para os ícones à esquerda e à direita */
+  width: 100%;
+  border-radius: 30px;
+  color: #333;
+}
 
-  /* Placeholder estilizado */
-  .search-bar input[type="text"]::placeholder {
-    color: #aaa;
-  }
+/* Placeholder estilizado */
+.search-bar input[type="text"]::placeholder {
+  color: #aaa;
+}
 
-  /* Ícone da lupa (lado esquerdo) */
-  .search-bar .search-icon {
-    position: absolute;
-    left: 15px;
-    font-size: 15px;
-    color: #888;
-    pointer-events: none; /* Permite clicar no campo de input sem ser bloqueado pelo ícone */
-  }
+/* Ícone da lupa (lado esquerdo) */
+.search-bar .search-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 15px;
+  color: #888;
+  pointer-events: none; /* Permite clicar no campo de input sem ser bloqueado pelo ícone */
+}
 
-  /* Botão com ícone do microfone (lado direito) */
-  .search-bar button {
-    position: absolute;
-    right: 15px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
+/* Botão com ícone do microfone (lado direito) */
+.search-bar button {
+  position: absolute;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
-  /* Estilos do ícone do microfone */
-  /* Estilos gerais da barra de pesquisa */
-  .search-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 30px;
-    padding: 5px;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  }
+/* Estilos do ícone do microfone */
+/* Estilos gerais da barra de pesquisa */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 5px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-  /* Estilos para o campo de texto (input) */
-  .search-bar input[type="text"] {
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 16px;
-    padding: 10px 50px; /* Espaço para os ícones */
-    width: 100%;
-    border-radius: 30px;
-    color: #333;
-  }
+/* Estilos para o campo de texto (input) */
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  padding: 10px 50px; /* Espaço para os ícones */
+  width: 100%;
+  border-radius: 30px;
+  color: #333;
+}
 
-  /* Placeholder estilizado */
-  .search-bar input[type="text"]::placeholder {
-    color: #aaa;
-  }
+/* Placeholder estilizado */
+.search-bar input[type="text"]::placeholder {
+  color: #aaa;
+}
 
-  /* Estilos do ícone do microfone */
-  .search-bar .mic-icon {
-    font-size: 20px; /* Tamanho do ícone */
-    color: #4285f4; /* Azul do Google */
-    position: relative; /* Para usar o pseudo-elemento */
-  }
+/* Estilos do ícone do microfone */
+.search-bar .mic-icon {
+  font-size: 20px; /* Tamanho do ícone */
+  color: #4285f4; /* Azul do Google */
+  position: relative; /* Para usar o pseudo-elemento */
+}
 
-  /* Adicionando um efeito colorido */
-  .search-bar .mic-icon::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%; /* Forma circular */
-    background: radial-gradient(
-      circle,
-      rgba(255, 0, 0, 0.6) 0%,
-      rgba(255, 255, 0, 0.6) 50%,
-      rgba(0, 255, 0, 0.6) 100%
-    ); /* Gradiente colorido */
-    z-index: -1; /* Coloca atrás do ícone */
-    transition: opacity 0.3s; /* Efeito de transição suave */
-  }
+/* Efeito de hover */
+.search-bar .mic-icon:hover::before {
+  opacity: 0.6; /* Efeito de sombra no hover */
+}
 
-  /* Efeito de hover */
-  .search-bar .mic-icon:hover::before {
-    opacity: 0.6; /* Efeito de sombra no hover */
-  }
+.artigos-container {
+  display: flex;
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  flex-wrap: wrap;
+  margin: 50px 0;
+  gap: 5px; /* Adiciona um pequeno espaçamento entre os cartões */
+}
 
-  .artigos-container {
-    display: flex;
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    flex-wrap: wrap;
-    margin: 50px 0;
-    gap: 5px; /* Adiciona um pequeno espaçamento entre os cartões */
-  }
+.artigo-card {
+  background-color: white;
+  width: 300px;
+  padding: 10px;
+  margin: 20px 20px;
+  box-shadow: 0 2px 10px rgba(230, 225, 225, 0.89);
+  border-radius: 8px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-decoration: none; /* Remove sublinhado do link */
+  color: inherit; /* Mantém a cor do texto ao invés de mudar para a cor padrão do link */
+}
 
-  .artigo-card {
-    background-color: white;
-    width: 300px;
-    padding: 10px;
-    margin: 20px 20px;
-    box-shadow: 0 2px 10px rgba(230, 225, 225, 0.89);
-    border-radius: 8px;
-    text-align: left;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    text-decoration: none; /* Remove sublinhado do link */
-    color: inherit; /* Mantém a cor do texto ao invés de mudar para a cor padrão do link */
-  }
+.artigo-card:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card suavemente no hover */
+}
 
-  .artigo-card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho do card suavemente no hover */
-  }
+.artigo-card img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  transition: transform 0.3s ease-in-out; /* Transição suave na imagem */
+}
 
-  .artigo-card img {
-    width: 100%;
-    border-radius: 5px 5px 0 0;
-    transition: transform 0.3s ease-in-out; /* Transição suave na imagem */
-  }
+.artigo-card img:hover {
+  transform: scale(
+    1.1
+  ); /* Aplica o efeito de zoom na imagem ao passar o mouse */
+}
 
-  .artigo-card img:hover {
-    transform: scale(
-      1.1
-    ); /* Aplica o efeito de zoom na imagem ao passar o mouse */
-  }
+.artigo-card .data {
+  color: #888;
+  font-size: 12px;
+  padding: 15px;
+}
 
-  .artigo-card .data {
-    color: #888;
-    font-size: 12px;
-    padding: 15px;
-  }
-
-  .artigo-card h2 {
-    padding: 0 15px;
-    font-size: 25px;
-    color: #333;
-    font-weight: 250; /* Define a espessura da fonte como leve */
-    /* Ou use font-weight: normal; para uma espessura padrão mais leve */
-  }
+.artigo-card h2 {
+  padding: 0 15px;
+  font-size: 25px;
+  color: #333;
+  font-weight: 250; /* Define a espessura da fonte como leve */
+  /* Ou use font-weight: normal; para uma espessura padrão mais leve */
 }
 
 /* Estilos responsivos */
@@ -193,5 +172,10 @@
   .search-bar .search-icon,
   .search-bar .mic-icon {
     font-size: 18px;
+  }
+
+  .artigos-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
