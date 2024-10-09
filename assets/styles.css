@@ -247,15 +247,6 @@ nav ul li a:hover::after {
   background-color: #7fa1d1;
 }
 
-/*.saiba-mais-btn::after {
-  content: "";
-  display: block;
-  width: 100%; /* Define a largura da linha */
-/* height: 2px; /* Altura da linha */
-/*background-color: #0c0e7a; /* Cor da linha */
-/*margin-top: 5px; /* Espaçamento entre o botão e a linha */
-/*}*/
-
 /* linha embaixo do button saiba mais  */
 .line {
   width: 20%; /* Largura da linha */
