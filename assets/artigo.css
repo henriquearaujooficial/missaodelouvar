@@ -9,31 +9,55 @@
     font-size: 25px;
     margin-top: 100px; /* Controla a distância do topo */
     margin-bottom: 60px; /* Controla a distância para o conteúdo abaixo */
-    margin-left: -550px; /* Move o título um pouco mais para a esquerda */
+    margin-left: -700px; /* Move o título um pouco mais para a esquerda */
     color: #4c8ad4;
     font-weight: 200; /* Define a espessura da fonte mais fina */
   }
 
+  /* Estilos gerais da barra de pesquisa */
   .search-bar {
-    margin: 20px auto;
-    width: 50%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    background-color: #ffff;
+    border-radius: 3px;
+    padding: 5px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
-  .search-bar input {
+  /* Estilos para o campo de texto (input) */
+  .search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
     padding: 10px;
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 1px 0 0 5px;
+    border-radius: 30px;
+    color: #333;
   }
 
+  /* Placeholder estilizado */
+  .search-bar input[type="text"]::placeholder {
+    color: #aaa;
+  }
+
+  /* Estilos do botão */
   .search-bar button {
-    background-color: white;
+    background-color: transparent;
     border: none;
-    border-left: 1px solid #ccc;
-    padding: 10px;
     cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+  }
+
+  /* Estilos do ícone dentro do botão */
+  .search-bar button img {
+    width: 20px;
+    height: 20px;
   }
 
   .artigos-container {
@@ -84,6 +108,23 @@
     padding: 0 10px;
     font-size: 18px;
     color: #333;
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .search-bar input[type="text"] {
+    font-size: 14px;
+  }
+
+  .search-bar button img {
+    width: 18px;
+    height: 18px;
   }
 }
 
