@@ -16,11 +16,11 @@
 
   /* Estilos gerais da barra de pesquisa */
   .search-bar {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #ffff;
-    border-radius: 3px;
+    background-color: #fff;
+    border-radius: 30px;
     padding: 5px;
     width: 100%;
     max-width: 800px;
@@ -34,7 +34,7 @@
     outline: none;
     background: none;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px 50px; /* Espaço para os ícones à esquerda e à direita */
     width: 100%;
     border-radius: 30px;
     color: #333;
@@ -45,19 +45,85 @@
     color: #aaa;
   }
 
-  /* Estilos do botão */
+  /* Ícone da lupa (lado esquerdo) */
+  .search-bar .search-icon {
+    position: absolute;
+    left: 15px;
+    font-size: 15px;
+    color: #888;
+    pointer-events: none; /* Permite clicar no campo de input sem ser bloqueado pelo ícone */
+  }
+
+  /* Botão com ícone do microfone (lado direito) */
   .search-bar button {
+    position: absolute;
+    right: 15px;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 5px;
-    margin-left: 10px;
   }
 
-  /* Estilos do ícone dentro do botão */
-  .search-bar button img {
-    width: 20px;
-    height: 20px;
+  /* Estilos do ícone do microfone */
+  /* Estilos gerais da barra de pesquisa */
+  .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estilos para o campo de texto (input) */
+  .search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    padding: 10px 50px; /* Espaço para os ícones */
+    width: 100%;
+    border-radius: 30px;
+    color: #333;
+  }
+
+  /* Placeholder estilizado */
+  .search-bar input[type="text"]::placeholder {
+    color: #aaa;
+  }
+
+  /* Estilos do ícone do microfone */
+  .search-bar .mic-icon {
+    font-size: 20px; /* Tamanho do ícone */
+    color: #4285f4; /* Azul do Google */
+    position: relative; /* Para usar o pseudo-elemento */
+  }
+
+  /* Adicionando um efeito colorido */
+  .search-bar .mic-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%; /* Forma circular */
+    background: radial-gradient(
+      circle,
+      rgba(255, 0, 0, 0.6) 0%,
+      rgba(255, 255, 0, 0.6) 50%,
+      rgba(0, 255, 0, 0.6) 100%
+    ); /* Gradiente colorido */
+    z-index: -1; /* Coloca atrás do ícone */
+    transition: opacity 0.3s; /* Efeito de transição suave */
+  }
+
+  /* Efeito de hover */
+  .search-bar .mic-icon:hover::before {
+    opacity: 0.6; /* Efeito de sombra no hover */
   }
 
   .artigos-container {
@@ -100,32 +166,32 @@
 
   .artigo-card .data {
     color: #888;
-    font-size: 10px;
+    font-size: 12px;
     padding: 15px;
   }
 
   .artigo-card h2 {
-    padding: 0 10px;
-    font-size: 18px;
+    padding: 0 15px;
+    font-size: 25px;
     color: #333;
+    font-weight: 250; /* Define a espessura da fonte como leve */
+    /* Ou use font-weight: normal; para uma espessura padrão mais leve */
   }
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .search-bar {
-    width: 90%;
-    max-width: 300px;
+    max-width: 100%;
   }
 
   .search-bar input[type="text"] {
     font-size: 14px;
+    padding: 10px 40px;
   }
 
-  .search-bar button img {
-    width: 18px;
-    height: 18px;
+  .search-bar .search-icon,
+  .search-bar .mic-icon {
+    font-size: 18px;
   }
 }
-
-/* Nova pagina ao Clicar*/
