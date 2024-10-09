@@ -256,6 +256,7 @@ nav ul li a:hover::after {
 /*margin-top: 5px; /* Espaçamento entre o botão e a linha */
 /*}*/
 
+/* linha embaixo do button saiba mais  */
 .line {
   width: 8%; /* Largura da linha */
   height: 1px; /* Altura da linha */
