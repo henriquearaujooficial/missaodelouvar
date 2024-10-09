@@ -62,6 +62,24 @@
   cursor: pointer;
 }
 
+/* Estilo do ícone de microfone com cores do Google */
+.mic-icon .material-icons {
+  font-size: 20px;
+  background: linear-gradient(45deg, #054de8e9, #e68f2c, #054de8e9, #0b16b3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Faz a cor do ícone ser o gradiente */
+  transition: opacity 0.3s ease;
+}
+
+.mic-icon:hover .material-icons {
+  opacity: 0.8; /* Efeito de hover no ícone */
+}
+
+.mic-icon:hover {
+  opacity: 0.8; /* Leve efeito de hover */
+}
+
 /* Estilos do ícone do microfone */
 /* Estilos gerais da barra de pesquisa */
 .search-bar {
@@ -124,8 +142,30 @@
   text-align: left;
   overflow: hidden;
   transition: transform 0.3s ease;
-  text-decoration: none; /* Remove sublinhado do link */
-  color: inherit; /* Mantém a cor do texto ao invés de mudar para a cor padrão do link */
+  text-decoration: none;
+  color: inherit;
+  position: relative; /* Necessário para a posição do pseudo-elemento */
+}
+
+.artigo-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Alinha a linha na parte inferior do card */
+  left: 0; /* A linha começa à esquerda */
+  width: 100%;
+  height: 2px; /* Espessura da linha */
+  background-color: #4c8ad4; /* Cor da linha */
+  transform: scaleX(0); /* Inicialmente invisível */
+  transform-origin: left; /* A linha cresce a partir da esquerda */
+  transition: transform 0.3s ease-in-out; /* Animação suave da linha */
+}
+
+.artigo-card:hover::after {
+  transform: scaleX(1); /* Expande a linha até preencher toda a largura */
+}
+
+.artigo-card:hover {
+  transform: scale(1.05); /* Mantém o efeito de aumentar o tamanho do card */
 }
 
 .artigo-card:hover {
@@ -152,7 +192,7 @@
 
 .artigo-card h2 {
   padding: 0 15px;
-  font-size: 25px;
+  font-size: 23px;
   color: #333;
   font-weight: 250; /* Define a espessura da fonte como leve */
   /* Ou use font-weight: normal; para uma espessura padrão mais leve */

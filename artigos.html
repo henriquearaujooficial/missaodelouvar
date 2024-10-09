@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link para o Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Não se esqueça de incluir a biblioteca de ícones, como Font Awesome -->
     <link rel="icon" href="images/FaviconMMLColor.png" type="image/x-icon" />
     <title>Ministério de Louvor</title>
@@ -30,10 +32,13 @@
     <!-- Artigos Section -->
     <section class="artigos">
         <h1>Artigos</h1>
+        <!-- Barra de Pesquisa com Ícone de Microfone -->
         <div class="search-bar">
-            <i class="fas fa-search search-icon"></i> <!-- Ícone de Lupa -->
-            <input type="text" placeholder="Inserir sua pesquisa">
-            <button><i class="fas fa-microphone mic-icon"></i></button> <!-- Ícone de Microfone -->
+            <i class="search-icon fas fa-search"></i>
+            <input type="text" placeholder="Pesquisar..." id="search-input">
+            <button class="mic-icon" id="voice-search-button">
+            <span class="material-icons">mic</span>
+            </button>
         </div>
             <!-- Card 1 -->
         <div class="artigos-container">
@@ -79,7 +84,7 @@
         <hr />
         <p>&copy; 2024 <strong>Ministério Missão de Louvar.</strong> Todos os direitos reservados&reg;.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="artigos.js"></script>
 </body>
 </html>
 
