@@ -85,7 +85,7 @@
 /* Estilo do ícone de microfone com cores do Google */
 .mic-icon .material-icons {
   font-size: 20px;
-  background: linear-gradient(45deg, #054de8e9, #e68f2c, #054de8e9, #0b16b3);
+  background: linear-gradient(45deg, #054de8e9, #e68f2c, #e86405e9, #0b16b3);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; /* Faz a cor do ícone ser o gradiente */
