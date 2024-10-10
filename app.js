@@ -1,22 +1,29 @@
 const express = require("express");
+const path = require("path");
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-// Middleware para permitir o recebimento de dados JSON
-app.use(express.json());
+// Configura o middleware para servir arquivos estáticos
+app.use(express.static(path.join(__dirname, "public")));
 
-// Rota de exemplo
-app.get("/", (req, res) => {
-  res.send("Olá, Mundo!");
+// Simulação de um banco de dados de livros
+const books = [
+  { title: "O Senhor dos Anéis", author: "J.R.R. Tolkien" },
+  { title: "1984", author: "George Orwell" },
+  { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry" }
+  // Adicione mais livros conforme necessário
+];
+
+// Rota de pesquisa
+app.get("/search", (req, res) => {
+  const query = req.query.query.toLowerCase();
+  const results = books.filter((book) =>
+    book.title.toLowerCase().includes(query)
+  );
+  res.json(results);
 });
 
-// Rota para pesquisar livros
-app.post("/pesquisar", (req, res) => {
-  const pesquisa = req.body.query; // Captura o que foi escrito na pesquisa
-  res.send(`Você pesquisou por: ${pesquisa}`);
-});
-
-// Iniciar o servidor
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+// Inicia o servidor
+app.listen(PORT, () => {
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
