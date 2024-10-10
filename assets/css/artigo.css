@@ -62,6 +62,26 @@
   cursor: pointer;
 }
 
+#mic-button {
+  background-color: transparent; /* Fundo transparente */
+  border: none; /* Remove a borda do botão */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  padding: 8px; /* Espaçamento interno */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mic-button .material-icons {
+  font-size: 24px; /* Tamanho do ícone */
+  color: #4285f4; /* Cor azul padrão do Google */
+}
+
+#mic-button:hover {
+  background-color: #f0f0f0; /* Fundo leve ao passar o mouse */
+  border-radius: 50%; /* Bordas arredondadas */
+}
+
 /* Estilo do ícone de microfone com cores do Google */
 .mic-icon .material-icons {
   font-size: 20px;
