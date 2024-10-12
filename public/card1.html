@@ -106,21 +106,65 @@
                 <li>Por:<a href="https://www.instagram.com/henriquearaujooficial/" target="_blank" style="text-decoration: none; color: inherit;">
                         <strong style="color: inherit;">Henrique Ferreira</strong></a>
                 </li>
+                <hr style="border: 0,5px solid #ccc; margin: 10px 0;"/>
+                <div class="compartilhe">
+                    <p style="display: inline;">Compartilhar:</p>
+                        <div class="social-icons" style="display: inline; margin-left: 5px;">
+                            <a href="https://www.instagram.com/henriquearaujooficial/" target="_blank" style="font-size: 16px; margin-left: 3px;">
+                                <i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com/henriquearaujooficial/" target="_blank" style="font-size: 16px; margin-left: 3px;">
+                                <i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/henriquearaujo" target="_blank" style="font-size: 16px; margin-left: 3px;">
+                                <i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/in/henriquearaujo" target="_blank" style="font-size: 16px; margin-left: 3px;">
+                                <i class="fab fa-linkedin"></i></a>
+                        </div> 
+                        <div class="curtidas" style="display: inline-block; margin-left: 680px;">
+                            <button id="likeButton" style="background: none; border: none; cursor: pointer; font-size: 15px; color: #0f08e6;">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <span id="likeCount" style="font-size: 15px; margin-left: 5px;">0</span>
+                        </div>
+                    </div>
+
+                    <script>
+                        let likeCount = 0;
+                        const likeButton = document.getElementById("likeButton");
+                        const likeCountSpan = document.getElementById("likeCount");
+                        
+                        likeButton.addEventListener("click", function() {
+                            likeCount++;
+                            likeCountSpan.textContent = likeCount;
+
+                            // Alterna a classe 'active' no botão
+                            likeButton.classList.toggle("active");
+                            
+                            // Altera a cor do coração quando está ativo
+                            const heartIcon = likeButton.querySelector("i");
+                            if (likeButton.classList.contains("active")) {
+                                heartIcon.classList.remove("far"); // Remove a classe "far"
+                                heartIcon.classList.add("fas");    // Adiciona a classe "fas"
+                            } else {
+                                heartIcon.classList.remove("fas"); // Remove a classe "fas"
+                                heartIcon.classList.add("far");     // Adiciona a classe "far"
+                            }
+                        });
+                   </script>
             </ul>
-        </section>
-    <footer>
-        <div class="footer-logo">
-            <img src="/assets/images/FaviconMMLColor.png" alt="Logo do Ministério" />
-        </div>
-        <div class="social-icons">
-            <a href="https://www.youtube.com/@henriqueferreiraoficial" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/henriquearaujooficial/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/henriquearaujooficial/" target="_blank"><i class="fab fa-facebook"></i></a>
-        </div>
-        <div class="address">
-            <p><strong>Endereço: </strong>Área Especial - 1 lote 13 - Setor Central - Lado Oeste. <strong>CEP: </strong>72.405-610 - <strong>Cidade:</strong> Gama - <strong>Estado:</strong> DF</p>
-        </div>
-        <hr />
+    </section>
+<footer>
+    <div class="footer-logo">
+        <img src="/assets/images/FaviconMMLColor.png" alt="Logo do Ministério" />
+    </div>
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@henriqueferreiraoficial" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/henriquearaujooficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/henriquearaujooficial/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="address">
+        <p><strong>Endereço: </strong>Área Especial - 1 lote 13 - Setor Central - Lado Oeste. <strong>CEP: </strong>72.405-610 - <strong>Cidade:</strong> Gama - <strong>Estado:</strong> DF</p>
+    </div>
+    <hr />
         <p>&copy; 2024 <strong>Ministério Missão de Louvar.</strong> Todos os direitos reservados&reg;.</p>
     </footer>
     <script src="script.js"></script>
