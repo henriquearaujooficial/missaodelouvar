@@ -1,0 +1,140 @@
+/* General reset */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffff;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh; /* Garante que o body ocupe a altura total da tela */
+  margin: 0;
+}
+
+/* Seção de publicação */
+.publicacao {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin: 80px 0; /* Margens verticais para espaçamento */
+  padding-left: 120px; /* Aumenta o espaçamento à esquerda */
+  margin-bottom: 10px; /* Margem abaixo do parágrafo */
+}
+
+.publication-info p {
+  font-size: 16px; /* Tamanho da fonte do texto */
+  color: #667d8fb0; /* Cor do texto */
+  margin-bottom: 10px; /* Margem abaixo do parágrafo */
+}
+
+/* Banner Section */
+.banner {
+  width: 85%; /* Ocupa 85% da largura do container */
+  margin: 1px auto 20px auto; /* Centraliza o banner com margens automáticas */
+  padding: 20px; /* Padding interno opcional para dar espaço ao conteúdo do banner */
+  overflow: hidden; /* Esconde o conteúdo que exceder os limites do banner */
+  position: relative; /* Permite o controle de elementos internos */
+}
+
+.banner img {
+  width: 100%; /* Define a largura da imagem como 100% do banner */
+  height: auto; /* Mantém a proporção da imagem */
+  transition: transform 0.5s ease; /* Adiciona uma transição suave à imagem */
+}
+
+.banner:hover img {
+  transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  width: 90%; /* Define a largura do main igual à do banner */
+  max-width: 800px;
+  margin: 100px auto;
+  flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+}
+
+.content {
+  padding: 20px;
+  background-color: #ffff;
+  border-radius: 1px;
+  text-align: justify; /* Justifica o texto */
+  width: 85%; /* Define a largura do conteúdo igual à do main */
+  margin-left: 85px; /* Move o conteúdo 20px para a direita */
+}
+
+.content h1 {
+  text-align: center;
+  color: #494949;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.content ul {
+  list-style-type: none; /* Remove qualquer tipo de marcador */
+  padding-left: 20px;
+}
+
+.content ul li {
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 15;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #555;
+  text-align: justify; /* Justifica o texto nos parágrafos */
+}
+
+/* Produzido por */
+.li a {
+  color: inherit; /* Mantém a cor original */
+}
+.li a:hover {
+  color: rgb(97, 100, 105); /* Azul claro ao passar o mouse */
+}
+.active {
+  color: rgba(8, 8, 96, 0.927); /* Define a cor azul para o coração */
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+.references {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
