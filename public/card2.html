@@ -106,6 +106,48 @@
                 <li>Por:<a href="https://www.instagram.com/henriquearaujooficial/" target="_blank" style="text-decoration: none; color: inherit;">
                         <strong style="color: inherit;">Henrique Ferreira</strong></a>
                 </li>
+                <hr style="border: 1px solid #ccc; margin: 10px 0;"/>
+                    <div class="compartilhe">
+                        <p style="display: inline;">Compartilhar:</p>
+                            <div class="social-icons" style="display: inline; margin-left: 10px;">
+                                <a href="https://www.instagram.com/henriquearaujooficial/" target="_blank" style="font-size: 16px; margin-left: 5px;">
+                                    <i class="fab fa-instagram"></i></a>
+                                <a href="https://facebook.com/henriquearaujooficial/" target="_blank" style="font-size: 16px; margin-left: 5px;">
+                                    <i class="fab fa-facebook"></i></a>
+                                <a href="https://twitter.com/henriquearaujo" target="_blank" style="font-size: 16px; margin-left: 5px;">
+                                    <i class="fab fa-twitter"></i></a>
+                            </div> 
+                            <div class="curtidas" style="display: inline-block; margin-left: 705px;">
+                                <button id="likeButton" style="background: none; border: none; cursor: pointer; font-size: 15px; color: #706c6b;">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span id="likeCount" style="font-size: 15px; margin-left: 10px;">0</span>
+                            </div>
+                        </div>
+
+                        <script>
+                            let likeCount = 0;
+                            const likeButton = document.getElementById("likeButton");
+                            const likeCountSpan = document.getElementById("likeCount");
+                            
+                            likeButton.addEventListener("click", function() {
+                                likeCount++;
+                                likeCountSpan.textContent = likeCount;
+
+                                // Alterna a classe 'active' no botão
+                                likeButton.classList.toggle("active");
+                                
+                                // Altera a cor do coração quando está ativo
+                                const heartIcon = likeButton.querySelector("i");
+                                if (likeButton.classList.contains("active")) {
+                                    heartIcon.classList.remove("far"); // Remove a classe "far"
+                                    heartIcon.classList.add("fas");    // Adiciona a classe "fas"
+                                } else {
+                                    heartIcon.classList.remove("fas"); // Remove a classe "fas"
+                                    heartIcon.classList.add("far");     // Adiciona a classe "far"
+                                }
+                            });
+                        </script>
             </ul>
         </section>
     <footer>
