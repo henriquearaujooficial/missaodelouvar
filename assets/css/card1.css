@@ -101,10 +101,10 @@ main {
   color: inherit; /* Mantém a cor original */
 }
 .li a:hover {
-  color: rgb(11, 50, 123); /* Azul claro ao passar o mouse */
+  color: rgb(97, 100, 105); /* Azul claro ao passar o mouse */
 }
 .active {
-  color: blue; /* Define a cor azul para o coração */
+  color: rgba(8, 8, 96, 0.927); /* Define a cor azul para o coração */
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
