@@ -21,6 +21,7 @@ body {
   text-align: left; /* Alinha o texto à esquerda */
   margin: 80px 0; /* Margens verticais para espaçamento */
   padding-left: 120px; /* Aumenta o espaçamento à esquerda */
+  margin-bottom: 10px; /* Margem abaixo do parágrafo */
 }
 
 .publication-info p {
@@ -92,6 +93,14 @@ main {
   font-size: 1rem;
   color: #555;
   text-align: justify; /* Justifica o texto nos parágrafos */
+}
+
+/* Produzido por */
+a {
+  color: inherit; /* Mantém a cor original */
+}
+a:hover {
+  color: rgb(11, 50, 123); /* Azul claro ao passar o mouse */
 }
 
 /* Responsive adjustments */
