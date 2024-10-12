@@ -113,10 +113,16 @@ h3 {
   color: #333;
 }
 
+.references h2 {
+  margin-bottom: 20px; /* Adiciona espaço abaixo da palavra "Referências" */
+}
+
 .references {
   margin-top: 30px;
   border-top: 1px solid #ccc;
-  padding-top: 10px;
+  padding-top: 20px;
+  margin-bottom: 60px; /* Adiciona espaço abaixo do texto */
+  line-height: 1.1; /* Diminui o espaço entre as linhas */
 }
 
 /* Responsive adjustments */
