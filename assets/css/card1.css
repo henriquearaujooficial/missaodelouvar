@@ -1,4 +1,5 @@
 /* General reset */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -96,10 +97,10 @@ main {
 }
 
 /* Produzido por */
-a {
+.li a {
   color: inherit; /* Mantém a cor original */
 }
-a:hover {
+.li a:hover {
   color: rgb(11, 50, 123); /* Azul claro ao passar o mouse */
 }
 
