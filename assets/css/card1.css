@@ -104,6 +104,10 @@ main {
   color: blue; /* Define a cor do link como azul */
 }
 
+.link-style:hover {
+  color: rgb(76, 124, 202);
+}
+
 /* Produzido por */
 .li a {
   color: inherit; /* Mantém a cor original */

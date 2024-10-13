@@ -91,9 +91,10 @@ main {
 }
 
 .content p {
-  font-size: 1rem;
+  font-size: 17px;
   color: #555;
   text-align: justify; /* Justifica o texto nos parágrafos */
+  margin-bottom: 15px;
 }
 
 /* Produzido por */
@@ -131,6 +132,10 @@ h3 {
 .link-style {
   text-decoration: none; /* Remove o sublinhado do link */
   color: blue; /* Define a cor do link como azul */
+}
+
+.li:hover {
+  color: rgb(76, 124, 202);
 }
 
 /* Responsive adjustments */
