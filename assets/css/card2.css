@@ -124,6 +124,14 @@ h3 {
   margin-bottom: 60px; /* Adiciona espaço abaixo do texto */
   line-height: 1.1; /* Diminui o espaço entre as linhas */
 }
+.blue-text {
+  color: blue;
+}
+
+.link-style {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: blue; /* Define a cor do link como azul */
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
